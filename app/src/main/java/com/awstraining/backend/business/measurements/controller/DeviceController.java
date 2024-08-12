@@ -44,6 +44,7 @@ class DeviceController implements DeviceIdApi {
                 .toList();
         final Measurements measurementsResult = new Measurements();
         measurementsResult.measurements(measurements);
+        LOGGER.info("Size of measurementsResults '{}'", measurementsResult.getMeasurements().size());
         return ResponseEntity.ok(measurementsResult);
     }
 
